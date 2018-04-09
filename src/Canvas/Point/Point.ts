@@ -1,4 +1,4 @@
-import { IPoint } from "./IPoint";
+import { IPoint } from './IPoint';
 
 export class Point implements IPoint {
     private x: number;
@@ -9,10 +9,10 @@ export class Point implements IPoint {
         this.y = y;
     }
 
-    getX(): number {
+    public getX(): number {
         return this.x;
     }
-    getY(): number {
+    public getY(): number {
         return this.y;
     }
 }
