@@ -22,8 +22,17 @@ Build project to dist folder
 npm run build
 ```
 
-<!-- ## Tests
+## Tests
 Run tests
 ```
-npm run test
-``` -->
+npm test
+```
+Run test with --watch
+```
+npm run test:watch
+```
+
+## Running Lint
+```
+npm run lint
+```

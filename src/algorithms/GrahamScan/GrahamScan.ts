@@ -17,8 +17,11 @@ export class GrahamScan implements IConvexHullAlgorithm {
     }
 
     public findPoints(): IPoint[] {
+        if (this.points.length < 3) {
+            return;
+        }
         const theBottommostIndex: number = this.findIndexOfTheBottommostPoint();
-        this.swapPoints(this.points[0], this.points[theBottommostIndex]);
+        this.swapPoints(0, theBottommostIndex);
         this.p0 = this.points[0];
         this.sortPoints();
         // If two or more points make same angle with p0,
@@ -69,10 +72,10 @@ export class GrahamScan implements IConvexHullAlgorithm {
     }
 
     // Swap two Points
-    private swapPoints(point1: IPoint, point2: IPoint) {
-        const temp: IPoint = point1;
-        point1 = point2;
-        point2 = temp;
+    private swapPoints(indexP1: number, indexP2: number) {
+        const temp: IPoint = this.points[indexP1];
+        this.points[indexP1] = this.points[indexP2];
+        this.points[indexP2] = temp;
     }
 
     // Square of distance between point1 and point2
