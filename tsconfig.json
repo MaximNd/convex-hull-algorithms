@@ -3,6 +3,7 @@
     "module": "es2015",
     "target": "es5",
     "rootDir": "src",
-    "sourceMap": true
+    "sourceMap": true,
+    "allowJs": true
   }
 }
